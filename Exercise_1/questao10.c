@@ -8,6 +8,6 @@ int main()
     temp=a;
     a=b;
     b=temp;
-    printf("O valor de A agora é %d e de B agora é %d", a, temp);
+    printf("O valor de A agora é %d e de B agora é %d", a, b);
     return 0;
 }
