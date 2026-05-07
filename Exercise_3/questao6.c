@@ -4,7 +4,7 @@ int main(){
     int a, i, fat;
     printf("Digite o valor a ser calculado o fatorial: \n");
     scanf("%d", &a);
-    if(a>0){
+    if(a>=0){
     fat = 1;
 printf("%d! = ",a);
     for(i=1; i<=a; i++){

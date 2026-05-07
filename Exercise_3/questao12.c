@@ -15,9 +15,11 @@ int main()
     
     if (sexo == 'F' || sexo == 'f'){
         muie++;
+        somaF += altura;
     }
     else if (sexo == 'M' || sexo == 'm'){
         home++;
+        somaM += altura;
     }
 
     for(int i =2; i<=n; i++){

@@ -7,7 +7,7 @@ int main(){
     printf("Digite o valor que deseja:\n");
     scanf("%d", &a);
 
-    if (a<1) {
+    if (a<=1) {
         primo = 0;
     }
     for (int i = 2; i < a ; i++){

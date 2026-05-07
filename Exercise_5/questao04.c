@@ -4,16 +4,21 @@
 
 int main(){
     char frase[100];
-    int contador = 0;
-    printf("Digite a frase ai oh:\n");
-    fgets (frase, sizeof(frase),stdin);
+    int contador = 0, emPalavra = 0;
+    printf("Digite a frase:\n");
+    fgets(frase, sizeof(frase), stdin);
     int j = strlen(frase);
-    for (int i = 0 ; i < j ; i++){
-        char c = towlower(frase[i]);
-        if(c != ' '){
-            contador++;
+    for (int i = 0; i < j; i++){
+        if (frase[i] != ' ' && frase[i] != '\n' && frase[i] != '\t'){
+            if (!emPalavra){
+                contador++;
+                emPalavra = 1;
+            }
+        }
+        else {
+            emPalavra = 0;
         }
     }
-    printf("\nSua frase possui %d letras!!", contador-1); //menos 1 pq o contador tava contando o enter como um caracter
+    printf("Sua frase possui %d palavra(s)!\n", contador);
     return 0;
 }

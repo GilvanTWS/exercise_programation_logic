@@ -10,7 +10,7 @@ int main()
         printf("%d", C);
     }
     else {
-        C+=5;
+        C-=5;
         printf("%d", C);
     }
     return 0;
