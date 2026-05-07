@@ -1,26 +1,27 @@
 #include <stdio.h>
-#include <math.h>
 
 int main() {
-    int num1, num2;
-    float num3;
+    int totalEleitores, votosBrancos, votosNulos, votosValidos;
 
-    printf("Digite o primeiro número inteiro: ");
-    scanf("%d", &num1);
+    printf("Digite o numero total de eleitores: ");
+    scanf("%d", &totalEleitores);
 
-    printf("Digite o segundo número inteiro: ");
-    scanf("%d", &num2);
+    printf("Digite o numero de votos brancos: ");
+    scanf("%d", &votosBrancos);
 
-    printf("Digite um número real: ");
-    scanf("%f", &num3);
+    printf("Digite o numero de votos nulos: ");
+    scanf("%d", &votosNulos);
 
-    float resultado1 = (2 * num1) * (num2 / 2.0);
-    float resultado2 = (3 * num1) + num3;
-    float resultado3 = pow(num3, 3);
+    printf("Digite o numero de votos validos: ");
+    scanf("%d", &votosValidos);
 
-    printf("\nResultado 1: %.2f\n", resultado1);
-    printf("Resultado 2: %.2f\n", resultado2);
-    printf("Resultado 3: %.2f\n", resultado3);
+    float percBrancos = (votosBrancos * 100.0) / totalEleitores;
+    float percNulos = (votosNulos * 100.0) / totalEleitores;
+    float percValidos = (votosValidos * 100.0) / totalEleitores;
+
+    printf("\nPercentual de votos brancos: %.2f%%\n", percBrancos);
+    printf("Percentual de votos nulos: %.2f%%\n", percNulos);
+    printf("Percentual de votos validos: %.2f%%\n", percValidos);
 
     return 0;
 }
